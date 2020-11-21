@@ -1,2 +1,4 @@
-# *Guillem Montejo* for the course *DSA* 
-### *Minimum 1 exam example implementation*
+# *Minim 1 - DSA* 
+### *Entregable mínim 1*
+
+En aquest repositori consta el codi desenvolupat per l'entregable del Mínim 1 de la assignatura DSA.
