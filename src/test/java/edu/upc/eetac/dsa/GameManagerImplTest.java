@@ -41,7 +41,7 @@ public class GameManagerImplTest {
 
 
         //Initializing Object List
-        listaObjetos =  new LinkedList<Objeto>();
+        listaObjetos =  new LinkedList<>();
 
         //Appending Object en Lista
         //Caso( String idCaso,String nombre, String apellidos, String genero, String correo, String direccion, Date fechaNacimiento,Date fechaInforme, String nivelRiesgo, String classificacion, int telefono)
@@ -86,7 +86,8 @@ public class GameManagerImplTest {
         Assert.assertEquals(2, this.manager.getObjectsFromUser("xyz"));
     }
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         manager.clearReserves();
+        logger.debug("Cleaning reserves");
     }
 }

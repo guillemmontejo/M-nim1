@@ -37,7 +37,7 @@ public class GameManagerImpl implements GameManager {
     //Listado ordenado alfabéticamente de los Usuarios
     public  List<User> getSortedUsersAlphabetical(){
         if(this.diccionarioUsuarios != null){
-            List<User> result = new LinkedList<User>(diccionarioUsuarios.values());
+            List<User> result = new LinkedList<>(diccionarioUsuarios.values());
             log.info("List of users before sorting it alphabetically: " + result.toString());
 
             Collections.sort(result, new Comparator<User>() {
@@ -110,8 +110,7 @@ public class GameManagerImpl implements GameManager {
     }
 
     public User getUser(String id){
-        User user = diccionarioUsuarios.get(id);
-        return user;
+        return diccionarioUsuarios.get(id);
     }
     //Añadir objeto al usuario
     public int addObjectToUser(String id, String gameObjectID){
@@ -273,5 +272,6 @@ public class GameManagerImpl implements GameManager {
     public  void clearReserves() {
         this.listaObjetos.clear();
         this.diccionarioUsuarios.clear();
+
     }
 }
